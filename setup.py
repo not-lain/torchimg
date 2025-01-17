@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 
 def get_version() -> str:
-    rel_path = "src/lorchimg/__init__.py"
+    rel_path = "src/torchimg/__init__.py"
     with open(rel_path, "r") as fp:
         for line in fp.read().splitlines():
             if line.startswith("__version__"):
@@ -28,5 +28,5 @@ setup(
     packages=find_packages("src"),
     include_package_data=True,
     classifiers=["Topic :: Utilities", "Programming Language :: Python :: 3.9"],
-    requires=["setuptools", "wheel", "typing", "torch", "requests"],
+    requires=["setuptools", "wheel", "typing", "torch"],
 )
